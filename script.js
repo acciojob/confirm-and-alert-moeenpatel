@@ -1,6 +1,9 @@
 //your JS code here. If required.
-let para = document.getElementById("timer");
+var confirmation = confirm("Do you want to proceed?");
 
-setInterval(()=>{
-	para.innerText = `${new Date().getDay()}/${new Date().getMonth()}/${new Date().getFullYear()},  ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`
-},1000)
+// Check user's choice and display appropriate alert
+if (confirmation) {
+    alert("You clicked OK. Proceeding...");
+} else {
+    alert("You clicked Cancel. Exiting...");
+}
